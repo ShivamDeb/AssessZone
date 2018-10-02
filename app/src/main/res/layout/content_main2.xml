@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Main2Activity"
+    tools:showIn="@layout/activity_main2">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        app:cardElevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="130dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:text="@string/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:textSize="14sp"
+                    android:text="Attempted"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nameTest"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:lines="2"
+                android:scrollbarSize="30sp"
+                android:text="Sadiq Raza"
+                android:textColor="@color/colorPrimary" />
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="00:00"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_below="@+id/ll1"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="00:00"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview2"
+        app:cardElevation="10dp"
+        android:layout_below="@+id/cardview"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="260dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="292dp"
+            android:layout_gravity="center"
+            android:keepScreenOn="true"
+            android:padding="5dp"
+            android:scrollbarSize="15dp"
+            android:scrollbars="horizontal">
+
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:scrollbarSize="15dp"
+                android:scrollbars="vertical">
+
+                <TextView
+                    android:id="@+id/qText"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:maxWidth="450dp"
+                    android:text="eg"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </ScrollView>
+
+
+        </HorizontalScrollView>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:cardElevation="10dp"
+        android:id="@+id/cardview3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:lines="2"
+                android:text="Clear \nSelection"
+                android:textSize="9sp" />
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:id="@+id/prev"
+                android:text="Prev"
+                android:layout_marginLeft="180dp"/>
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:id="@+id/next"
+                android:text="Next"
+                android:layout_marginLeft="285dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:layout_above="@+id/cardview3"
+        android:layout_gravity="center"
+        android:keepScreenOn="true"
+        android:padding="5dp"
+        android:scrollbarSize="5dp"
+        android:scrollbars="horizontal">
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:scrollbarSize="15dp"
+            android:scrollbars="vertical">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/opt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="380dp"
+                    android:text="RadioButtonkggl ug ucgduyfg dufg gu udgflduggugfudgys fuygs  dfadfayud "
+                    android:textSize="17sp" />
+
+                <RadioButton
+                    android:id="@+id/opt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="380dp"
+                    android:text="RadioButton"
+                    android:textSize="17sp" />
+
+                <RadioButton
+                    android:id="@+id/opt3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="370dp"
+                    android:text="RadioButton"
+                    android:textSize="17sp" />
+
+                <RadioButton
+                    android:id="@+id/opt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="370dp"
+                    android:text="RadioButton"
+                    android:textSize="17sp" />
+
+            </RadioGroup>
+        </ScrollView>
+
+
+    </HorizontalScrollView>
+
+</RelativeLayout>
